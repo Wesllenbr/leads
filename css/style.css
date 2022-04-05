@@ -1,45 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Leads</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar container">
-           <a href="" class="logo">Facility Software</a>
-           
-           <ul class="nav__list">
-               <li class="nav__item">
-                   <a href="" class="nav__link btn__primary">Cadastrar-se</a>
-               </li>
-               <li class="nav__item">
-                   <a href="" class="nav__link btn__secondary" >Login</a>
-               </li>
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
 
-               <img src="img/bx-menu-alt-right.svg" alt="" class="menu__icon">
-            </ul>
-        </nav>
-    </header>
+/*==================== VARIABLES CSS ====================*/
+:root {
+    
+    /*========== Colors ==========*/
+    --primary-color: #fff;
+    --secondary-color: ;
+    --acent-color: #2B49FE;
+    --black-color: #000;
+    
+    /*========== Font and typography ==========*/
+    --body-font: 'Inter', sans-serif;
+    --h1-font-size: 1.25rem;
+    --normal-font-size: 1rem;
 
-    <main>
-       <section class="section__content section">
-           <div class="content__container container">
-               <div class="description">
-                   <h1>Ferramentas de mídia social mais simples para um envolvimento autêntico</h1>
-                    <p>Conte a história de sua marca e aumente seu público com uma plataforma de publicação, análise o engajamento em que você pode confiar.</p>
+/*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+}
 
-                   <a href="" class="btn__primary">Cadastrar-se</a>
-                   <a href="" class="btn__secondary">Login</a>
-               </div>
-       
-           <img src="img/undraw_setup_analytics_re_foim 1.svg" alt="" class="ilustration__img">
-       </div>
-           
-       </section>
-    </main>
-</body>
-</html>
+/*FONT SIZE FOR LARGES DEVICES */
+@media (min-width: 968px) {
+    :root {
+        --h1-font-size: 2rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body{
+    height: 100vh;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    line-height: 1.5;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+}
+
+h1{
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h1-font-size);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    max-width: 68.75rem;
+    margin: 0 1.5rem;
+}
+
+.section {
+    padding-top: 3.75rem;
+}
+
+.btn__primary {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--acent-color);
+    color: #fff;
+    width: 10.125rem;
+    padding: 15px 20px;
+    margin-right: 1.5rem;
+}
+
+.btn__secondary {
+    display: inline-block;
+    text-align: center;
+    border: solid 1px var(--acent-color);
+    width: 7.75rem;
+    color: var(--black-color);
+    padding: 15px 20px;
+}
+
+/*=============== NAVBAR ===============*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.75rem;
+}
+
+.navbar .logo {
+    color: var(--black-color);
+    font-size: 1.125rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__list .btn__primary {
+    display: none;
+}
+
+.nav__list .btn__secondary {
+    display: none; 
+}
+
+.nav__list .menu__icon {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.description {
+    margin-bottom: 3.75rem;
+}
+
+.description h1 {
+    max-width: 31.938rem;
+    margin-bottom: 0.75rem;
+}
+
+.description p {
+    max-width: 26.75rem;
+    opacity: 0.7;
+    margin-bottom: 2.25rem;
+}
+
+.ilustration__img {
+    margin: 0 auto;
+}
+@media (max-width: 25rem) {
+    .description .btn__primary, .description .btn__secondary {
+        width: 100%;
+    }
+
+    .description .btn__primary {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media(min-width: 75rem) {
+    .container {
+        margin: 0 auto;
+    }
+
+    .section {
+        padding-top: 5.625rem;
+    }
+    
+    .description .btn__secondary {
+        display: none;
+    }
+
+    .nav__list {
+        display: flex;
+        gap: 1.5rem;
+    }
+    
+    .nav__list .menu__icon {
+        display: none;
+    }
+
+    .nav__list .btn__primary, .description .btn__primary {
+        display: block;
+        width: 13.125rem;
+        margin: 0;
+    } 
+    
+    .nav__list .btn__secondary {
+        display: block;
+    } 
+      
+    .content__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 1rem;
+    }
+      
+    .description h1 {
+        max-width: 31.938rem;
+        margin-bottom: 1.125rem;
+    }
+      
+    .description p {
+        max-width: 26.75rem;
+        opacity: 0.7;
+    }
+    
+    .description a {
+        display: block;
+        margin-top: 2.625rem;
+    }   
+}
