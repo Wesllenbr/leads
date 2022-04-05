@@ -64,6 +64,7 @@ a {
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
@@ -84,7 +85,7 @@ img {
     background-color: var(--acent-color);
     color: #fff;
     width: 10.125rem;
-    padding: 12px 20px;
+    padding: 15px 20px;
     margin-right: 1.5rem;
 }
 
@@ -139,8 +140,18 @@ img {
     margin-bottom: 2.25rem;
 }
 
+.ilustration__img {
+    margin: 0 auto;
+}
+@media (max-width: 25rem) {
+    .description .btn__primary, .description .btn__secondary {
+        width: 100%;
+    }
 
-
+    .description .btn__primary {
+        margin-bottom: 1.5rem;
+    }
+}
 
 @media(min-width: 75rem) {
     .container {
@@ -152,8 +163,7 @@ img {
     }
     
     .description .btn__secondary {
-        display: none;
-        background-color: tomato;
+        display: none !important;
     }
 
     .nav__list {
