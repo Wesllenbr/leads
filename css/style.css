@@ -78,6 +78,26 @@ img {
     padding-top: 3.75rem;
 }
 
+.btn__primary {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--acent-color);
+    color: #fff;
+    width: 10.125rem;
+    padding: 12px 20px;
+    margin-right: 1.5rem;
+}
+
+.btn__secondary {
+    display: inline-block;
+    text-align: center;
+    border: solid 1px var(--acent-color);
+    width: 7.75rem;
+    color: var(--black-color);
+    padding: 12px 20px;
+}
+
+/*=============== NAVBAR ===============*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -96,8 +116,7 @@ img {
 }
 
 .nav__list .btn__secondary {
-    display: none;
-    
+    display: none; 
 }
 
 .nav__list .menu__icon {
@@ -105,27 +124,10 @@ img {
     height: 1.875rem;
 }
 
-.btn__primary {
-    display: block;
-    text-align: center;
-    background-color: var(--acent-color);
-    color: #fff;
-    width: 10.125rem;
-    padding: 12px 20px;
-}
-
-.btn__secondary {
-    display: block;
-    text-align: center;
-    border: solid 1px var(--acent-color);
-    width: 7.75rem;
-    color: var(--black-color);
-    padding: 12px 20px;
-}
-
 .description {
     margin-bottom: 3.75rem;
 }
+
 .description h1 {
     max-width: 31.938rem;
     margin-bottom: 0.75rem;
@@ -139,6 +141,7 @@ img {
 
 
 
+
 @media(min-width: 75rem) {
     .container {
         margin: 0 auto;
@@ -147,121 +150,50 @@ img {
     .section {
         padding-top: 5.625rem;
     }
+    
+    .description .btn__secondary {
+        display: none;
+        background-color: tomato;
+    }
+
+    .nav__list {
+        display: flex;
+        gap: 1.5rem;
+    }
+    
+    .nav__list .menu__icon {
+        display: none;
+    }
+
+    .nav__list .btn__primary, .description .btn__primary {
+        display: block;
+        width: 13.125rem;
+    } 
+    
+    .nav__list .btn__secondary {
+        display: block;
+        width: 13.125rem;
+    } 
       
-      .navbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          height: 80px;
-      }
+    .content__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 1rem;
+    }
       
-      .navbar .logo {
-          color: var(--black-color);
-          font-size: 1.5rem;
-          font-weight: var(--font-semi-bold);
-      }
+    .description h1 {
+        max-width: 31.938rem;
+        margin-bottom: 1.125rem;
+    }
       
-      .nav__list {
-          display: flex;
-          gap: 1.5rem;
-      }
-      
-      .btn__primary {
-          display: block;
-          text-align: center;
-          background-color: var(--acent-color);
-          color: #fff;
-          width: 13.125rem;
-          padding: 12px 20px;
-      }
-      
-      .btn__secondary {
-          display: block;
-          text-align: center;
-          border: solid 1px var(--acent-color);
-          width: 10.625rem;
-          color: var(--black-color);
-          padding: 12px 20px;
-      }
-      
-      .content__container{
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          align-items: center;
-          gap: 5rem;
-      }
-      
-      .description h1 {
-          max-width: 31.938rem;
-          margin-bottom: 1.125rem;
-      }
-      
-      .description p {
-          max-width: 26.75rem;
-          opacity: 0.7;
-      }
-      
-      .description a {
-          display: block;
-          margin-top: 2.625rem;
-      }
-        
-      .navbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          height: 80px;
-      }
-      
-      .navbar .logo {
-          color: var(--black-color);
-          font-size: 1.5rem;
-          font-weight: var(--font-semi-bold);
-      }
-      
-      .nav__list {
-          display: flex;
-          gap: 1.5rem;
-      }
-      
-      .btn__primary {
-          display: block;
-          text-align: center;
-          background-color: var(--acent-color);
-          color: #fff;
-          width: 13.125rem;
-          padding: 12px 20px;
-      }
-      
-      .btn__secondary {
-          display: block;
-          text-align: center;
-          border: solid 1px var(--acent-color);
-          width: 10.625rem;
-          color: var(--black-color);
-          padding: 12px 20px;
-      }
-      
-      .content__container{
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          align-items: center;
-          gap: 5rem;
-      }
-      
-      .description h1 {
-          max-width: 31.938rem;
-          margin-bottom: 1.125rem;
-      }
-      
-      .description p {
-          max-width: 26.75rem;
-          opacity: 0.7;
-      }
-      
-      .description a {
-          display: block;
-          margin-top: 2.625rem;
-      }
-      
+    .description p {
+        max-width: 26.75rem;
+        opacity: 0.7;
+    }
+    
+    .description a {
+        display: block;
+        margin-top: 2.625rem;
+    }   
 }
