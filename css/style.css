@@ -41,6 +41,7 @@ html {
 }
 
 body{
+    padding-top: 40px;
     height: 100vh;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
