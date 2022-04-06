@@ -143,7 +143,8 @@ img {
 .ilustration__img {
     margin: 0 auto;
 }
-@media (max-width: 25rem) {
+
+@media (max-width: 30rem) {
     .description .btn__primary, .description .btn__secondary {
         width: 100%;
     }
